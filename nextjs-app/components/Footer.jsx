@@ -22,7 +22,7 @@ const Footer = () => {
 
   const handleEmailClick = (email) => window.open(`mailto:${email}`, '_blank');
   const handlePhoneClick = (phone) => window.open(`tel:${phone}`, '_self');
-  const handleLocationClick = (address) => window.open(`https://maps.google.com/maps?q=${encodeURIComponent(address)}`, '_blank');
+  const handleLocationClick = (url) => window.open(url, '_blank');
 
   return (
     <footer className="footer">
@@ -52,9 +52,13 @@ const Footer = () => {
                 <i className="fas fa-phone"></i>
                 <span>0120-3244364</span>
               </div>
-              <div className="footer-contact-item clickable" onClick={() => handleLocationClick('S-1 Skytech Matrott Market, Sector-76, Noida (U.P) 201307')} style={{ cursor: 'pointer' }}>
+              <div className="footer-contact-item clickable" onClick={() => handleLocationClick('https://maps.app.goo.gl/F4oyJaHCwG5fEHzn8?g_st=iw')} style={{ cursor: 'pointer' }}>
                 <i className="fas fa-map-marker-alt"></i>
-                <span>S-1 Skytech Matrott Market, Sector-76, Noida (U.P) 201307</span>
+                <span>Shop No.1, SKYTECH MATROTT, Aditya Celebrity Homes, Sector 76, Noida, U.P. 201316</span>
+              </div>
+              <div className="footer-contact-item clickable" onClick={() => handleLocationClick('https://maps.google.com/?q=28.306482,77.558189')} style={{ cursor: 'pointer' }}>
+                <i className="fas fa-map-marker-alt"></i>
+                <span>GF 90 & 96 Gaur Runway Suites, Gaur Yamuna City Sec-19, Yamuna Expressway, Greater Noida - 203201</span>
               </div>
             </div>
           </div>

@@ -127,10 +127,8 @@ const Contact = () => {
     window.open(`tel:${phoneNumber}`, '_self');
   };
 
-  const handleLocationClick = () => {
-    const address = "S-1 Skytech Matrott Market, Sector-76, Noida (U.P) 201307";
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-    window.open(mapsUrl, '_blank');
+  const handleLocationClick = (url) => {
+    window.open(url, '_blank');
   };
 
   const contactItems = [
@@ -148,9 +146,15 @@ const Contact = () => {
     },
     {
       icon: 'fas fa-map-marker-alt',
-      title: 'Visit Us',
-      content: 'S-1 Skytech Matrott Market\nSector-76, Noida (U.P) 201307',
-      onClick: handleLocationClick
+      title: 'Office 1 — Noida',
+      content: 'Shop No.1, SKYTECH MATROTT, Market,\nSkytech Matrott, Aditya Celebrity Homes,\nSector 76, Noida, Uttar Pradesh 201316',
+      onClick: () => handleLocationClick('https://maps.app.goo.gl/F4oyJaHCwG5fEHzn8?g_st=iw')
+    },
+    {
+      icon: 'fas fa-map-marker-alt',
+      title: 'Office 2 — Greater Noida',
+      content: 'GF 90 & 96 Gaur Runway Suites,\nGaur Yamuna City Sec-19,\nYamuna Expressway, Greater Noida - 203201',
+      onClick: () => handleLocationClick('https://maps.google.com/?q=28.306482,77.558189')
     },
     {
       icon: 'fas fa-clock',
